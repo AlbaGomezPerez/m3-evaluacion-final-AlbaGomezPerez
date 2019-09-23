@@ -4,6 +4,7 @@ import Filters from './components/Filters';
 import CharacterList from './components/CharacterList'; 
 import {GetCharacters} from './services/GetCharacters';
 import Home from './components/Home'; 
+import CharacterDetail from './components/CharacterDetail';
 // import CharacterCard from './components/CharacterCard'; 
 // import CharacterDetail from './components/CharacterDetail';  
 
@@ -56,11 +57,15 @@ class App extends React.Component {
 				<header>
 					<h1 className="Title">Rick and Morty</h1>
 				</header>
-				<Home 
+				{/* <Home 
 					AllCharacters={AllCharacters}
 					SearchName={SearchName}
 					getNameInput={this.getNameInput}
-					/>
+					/> */}
+				<CharacterDetail 
+					AllCharacters={AllCharacters}
+					CharacterId={1}
+				/>
 			</div>
 		); 
 	}; 
