@@ -18,7 +18,7 @@ const Home = props => {
 }; 
 	
 Home.propTypes = {
-	SearchName: PropTypes.string.isRequired, 
+	SearchName: PropTypes.string, 
 	getNameInput: PropTypes.func, 
 	AllCharacters: PropTypes.array
 };
