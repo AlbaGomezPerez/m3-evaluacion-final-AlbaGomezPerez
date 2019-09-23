@@ -3,6 +3,7 @@ import './App.css';
 import Filters from './components/Filters'; 
 import CharacterList from './components/CharacterList'; 
 import {GetCharacters} from './services/GetCharacters';
+import Home from './components/Home'; 
 // import CharacterCard from './components/CharacterCard'; 
 // import CharacterDetail from './components/CharacterDetail';  
 
@@ -41,8 +42,7 @@ class App extends React.Component {
 
 	// método del dato que introduce el usuario para buscar por nombre 
 	getNameInput(event) {
-	const SearchName = event.currentTarget.value;  
-	
+		const SearchName = event.currentTarget.value;  
 		this.setState({
 			SearchName: SearchName 
 	}); 
@@ -50,16 +50,17 @@ class App extends React.Component {
 }
 
 	render() {
-			const {AllCharacters, SearchName} = this.state; 
+		const {AllCharacters, SearchName} = this.state; 
 		return (
 			<div className="App">
-			<h1 className="Title">Rick and Morty</h1>
-				<Filters 
-					SearchName={SearchName}
-					getNameInput={this.getNameInput}/>
-				<CharacterList 
+				<header>
+					<h1 className="Title">Rick and Morty</h1>
+				</header>
+				<Home 
 					AllCharacters={AllCharacters}
-					SearchName={SearchName}/>
+					SearchName={SearchName}
+					getNameInput={this.getNameInput}
+					/>
 			</div>
 		); 
 	}; 

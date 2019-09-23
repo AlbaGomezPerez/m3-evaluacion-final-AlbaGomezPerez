@@ -12,8 +12,8 @@ const Filters = props => {
 };
 
 Filters.propTypes = {
-  SearchName: PropTypes.string.isRequired, 
-  getNameInput: PropTypes.func.isRequired
+  SearchName: PropTypes.string, 
+  getNameInput: PropTypes.func
   
 };
 
