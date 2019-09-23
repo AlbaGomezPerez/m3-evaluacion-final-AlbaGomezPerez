@@ -13,9 +13,14 @@ class App extends React.Component {
 		super(props); 
 
 		this.state = {
-			AllCharacters : []
+			AllCharacters: [], 
+			SearchName: ''
 	}; 
+
+	this.getNameInput = this.getNameInput.bind(this); 
 }
+
+
 
 // Función sirve para pintar la petición al entrar en la página
 	componentDidMount() {
@@ -34,13 +39,24 @@ class App extends React.Component {
 		}); 
 	}
 
+	// método del dato que introduce el usuario para buscar por nombre 
+	getNameInput(event) {
+	const SearchName = event.currentTarget.value;  
+	this.setState({
+		SearchName: SearchName, 
+	})
+
+}
 
 	render() {
-			const {AllCharacters} = this.state; 
+			const {AllCharacters, SearchName} = this.state; 
 		return (
 			<div className="App">
+				<p>Busca por nombre del personaje</p>
+				<input className="NameInput" onChange={this.getNameInput}></input>
 				<Filters 
-					AllCharacters={AllCharacters}/>
+					AllCharacters={AllCharacters}
+					SearchName={SearchName}/>
 			</div>
 		); 
 	}; 

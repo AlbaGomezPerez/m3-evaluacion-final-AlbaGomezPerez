@@ -5,13 +5,14 @@ import React from 'react';
 
 class Filters extends React.Component{
 	render() {
-		const {AllCharacters} = this.props;
+		const {AllCharacters, SearchName} = this.props;
 		return (
 			<React.Fragment>
 				{AllCharacters 
+				.filter(myCartoon => myCartoon.name.toUpperCase().includes(SearchName.toUpperCase()))
 				.map((item, index) => 
-					<ul className="containerCharacter" key={index}> 
-						<li className="paintCharacter">
+					<ul className="ContainerCharacter" key={index}> 
+						<li className="PaintCharacter">
 							<div className="CharacterPhotoContainer">
 								<img className="CharacterPhoto" src={item.image} alt='PhotoCharacter'></img>
 							</div>
