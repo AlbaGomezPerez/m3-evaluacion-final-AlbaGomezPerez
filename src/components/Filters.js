@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // no pinta nada, solo hace filter y map y luego es llamada 
 // en otro sitio
@@ -26,6 +27,11 @@ class Filters extends React.Component{
 		); 
 	} 
 }; 
+
+Filters.propTypes = {
+	AllCharacters: PropTypes.array,
+	SearchName: PropTypes.string
+  };
 
 
 export default Filters;
