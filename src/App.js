@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import Filters from './components/Filters'; 
 import CharacterList from './components/CharacterList'; 
-import CharacterCard from './components/CharacterCard'; 
-import CharacterDetail from './components/CharacterDetail'; 
-import {GetCharacters} from './services/GetCharacters'; 
+import {GetCharacters} from './services/GetCharacters';
+// import CharacterCard from './components/CharacterCard'; 
+// import CharacterDetail from './components/CharacterDetail';  
 
 
 // Estados. Array vacío (AllCharacters)
@@ -42,9 +42,10 @@ class App extends React.Component {
 	// método del dato que introduce el usuario para buscar por nombre 
 	getNameInput(event) {
 	const SearchName = event.currentTarget.value;  
-	this.setState({
-		SearchName: SearchName, 
-	})
+	
+		this.setState({
+			SearchName: SearchName 
+	}); 
 
 }
 
@@ -52,9 +53,11 @@ class App extends React.Component {
 			const {AllCharacters, SearchName} = this.state; 
 		return (
 			<div className="App">
-				<p>Busca por nombre del personaje</p>
-				<input className="NameInput" onChange={this.getNameInput}></input>
+			<h1 className="Title">Rick and Morty</h1>
 				<Filters 
+					SearchName={SearchName}
+					getNameInput={this.getNameInput}/>
+				<CharacterList 
 					AllCharacters={AllCharacters}
 					SearchName={SearchName}/>
 			</div>

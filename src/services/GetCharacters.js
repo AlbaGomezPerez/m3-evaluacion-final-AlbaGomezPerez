@@ -1,4 +1,4 @@
-const url = "https://rickandmortyapi.com/api/character/"; 
+const url = "https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json"; 
 
 const GetCharacters = () => {
 	return fetch(url)

@@ -1,15 +1,15 @@
-import React from 'react';
+// import React from 'react';
 
-// pinta la tarjeta sola de cada personaje. Usar router
+// // pinta la tarjeta sola de cada personaje. Usar router
 
-class CharacterDetail extends React.Component {
-	render() {
-		return(
-			console.log()
+// class CharacterDetail extends React.Component {
+// 	render() {
+// 		return(
+// 			console.log()
 
-		); 
-	}; 
-}
+// 		); 
+// 	}; 
+// }
 
 
-export default CharacterDetail;
+// export default CharacterDetail;
