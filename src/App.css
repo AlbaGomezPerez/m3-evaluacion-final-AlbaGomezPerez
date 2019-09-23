@@ -1,7 +1,38 @@
 .App {
   text-align: center;
+  height: 100%; 
+  background-color: #2A2740; 
 }
 
-.ContainerCharacter {
-	list-style: none;
+.Title {
+	width: 100vw;
+ 	height: 1px; 
+ 	overflow: hidden;
+ 	background-size: cover;
+	padding-top: 300px; 
+	background-image: url(./images/Rick.png); 
+	
+	/* @media all and (min-width:768px){
+		width: 470px;
+		padding-top: 120px;
+} */
 }
+
+.CharacterName {
+	background-color: #A2D99A; 
+	width: 300px; 
+	text-align: center; 
+	margin: auto;
+}
+
+.CharacterSpecies {
+	background-color: #165946;
+	width: 300px; 
+	text-align: center;
+	margin: auto;  
+}
+
+.CharacterPhotoContainer {
+	margin-bottom: 20px; 
+}
+
