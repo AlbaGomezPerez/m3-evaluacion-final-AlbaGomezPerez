@@ -8,17 +8,17 @@ import PropTypes from 'prop-types';
 const CharacterList = props => {
 		const {AllCharacters, SearchName} = props;
 		return (
-			<ul clasName="Cartoons">
+			<ul className="Cartoons" >
 				{AllCharacters 
 				.filter(myCartoon => myCartoon.name.toUpperCase().includes(SearchName.toUpperCase()))
 				.map(item => {
 					return (
-						<li>
+						<li key={item.id}>
 							<CharacterCard 
 								name={item.name}
 								img={item.image}
 								species={item.species}
-								id={item.ide}/>
+								id={item.id}/>
 						</li>
 					); 
 				})}

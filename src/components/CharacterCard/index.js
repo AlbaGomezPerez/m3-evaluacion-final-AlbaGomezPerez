@@ -23,9 +23,7 @@ CharacterCard.propTypes = {
 	name: PropTypes.string,
 	img: PropTypes.string, 
 	species: PropTypes.string,
-	id: PropTypes.string
-	
-	// NUMBER ID ????
+	id: PropTypes.number
   };
 
 
