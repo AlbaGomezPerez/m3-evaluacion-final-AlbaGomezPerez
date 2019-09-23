@@ -1,4 +1,4 @@
-const url = ""; 
+const url = "https://rickandmortyapi.com/api/character/"; 
 
 const GetCharacters = () => {
 	return fetch(url)
