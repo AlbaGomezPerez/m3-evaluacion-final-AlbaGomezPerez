@@ -14,6 +14,7 @@ const CharacterList = props => {
 				.map(item => {
 					return (
 						<li key={item.id}>
+							{/* meter link para characterDetail */}
 							<CharacterCard 
 								name={item.name}
 								img={item.image}
