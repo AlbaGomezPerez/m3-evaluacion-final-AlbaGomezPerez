@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const CharacterDetail = props => { 
 	const {AllCharacters, Match} = props;  
@@ -10,6 +11,7 @@ const CharacterDetail = props => {
 				.map(item => {
 					return (
 						<div className="card" key={item.id}>
+							<Link to={"/"}>
 							<ul className="ContainerCharacter"> 
 								<li className="PaintCharacter">
 									<div className="CharacterPhotoContainer">
@@ -22,6 +24,10 @@ const CharacterDetail = props => {
 									<div className="CharacterEpisodes">It appears in {item.episode.length} episodes</div>
 								</li>
 							</ul>
+							<div className="BackContainer">
+								<p className="BackText">Go back</p>
+							</div>
+							</Link>
 						</div>
 					)  
 				})}
