@@ -7,10 +7,6 @@ body {
   height: 100%;  
 }
 
-
-@media all and (min-width:3px){
-	width: 470px;
-	padding-top: 120px;
 	
 .Title {
 	width: 800px;
@@ -21,7 +17,6 @@ body {
 	background-repeat: no-repeat; 
 	padding-top: 300px; 
 	background-image: url(./images/Rick.png); 
-	
 }
 
 .NameInput {
@@ -84,6 +79,15 @@ body {
 	 
 }
 
+.Cartoons {
+	@media all and (max-width:768px){
+	grid-template-columns: auto auto; 	
+} 
+	@media all and (max-width:320px){
+	grid-template-columns: auto; 	
+} 
+}
+
 .card {
 	text-decoration: none; 
 	width: 1px; 
@@ -108,14 +112,13 @@ body {
 	margin-left: 20%;
 	display: flex; 
 	height: 300px;
-	padding: 40px; 
+	padding: 40px; 	
 }
 
 .PaintCharacterDetail {
 	display: flex;
 }
-/* .CharacterPhotoContainerDetail { 
-} */
+
 .CharacterPhotoDetail {
 	background-color: brown; 
 }
@@ -144,6 +147,7 @@ body {
 	margin-left: 20px; 
 	margin-bottom: 10px; 
 }
+
 .CharacterStatusDetail {
 	background-color: #165946;
 	color: white; 
@@ -152,6 +156,7 @@ body {
 	margin-left: 20px; 
 	margin-bottom: 10px; 
 }
+
 .CharacterPlanetDetail {
 	background-color: #524373;
 	color: white; 
@@ -160,6 +165,7 @@ body {
 	margin-left: 20px; 
 	margin-bottom: 10px; 
 }
+
 .CharacterEpisodesDetail {
 	background-color: rgb(136, 90, 114);
 	color: white;
@@ -170,16 +176,5 @@ body {
 }
 
 .BackContainer {
-	/* background-color: rgb(8, 168, 155);  */
 	margin-left: 20px; 
 }
-
-
-
-
-/* grid al ul */
-/* auto auto */
-/* li display flex, center */
-
-
-
