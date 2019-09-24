@@ -16,7 +16,5 @@ Filters.propTypes = {
   
 };
 
-// input y estructura de buscar 
-
 export default Filters;
 

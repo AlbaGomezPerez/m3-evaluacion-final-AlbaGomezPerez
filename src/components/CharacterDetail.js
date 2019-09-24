@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
+// Tarjeta de detalle. Se filtra por el id. Match significa :id
 const CharacterDetail = props => { 
 	const {AllCharacters, Match} = props;  
 	const CharacterId = parseInt(Match.params.id); 
@@ -39,11 +41,11 @@ const CharacterDetail = props => {
 
 }
 
-
-// // pinta la tarjeta sola de cada personaje. Usar router
-
-
-
+CharacterDetail.propTypes = {
+	AllCharacters: PropTypes.array, 
+	Match: PropTypes.number
+	
+  };
 
 export default CharacterDetail;
 

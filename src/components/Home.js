@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Filters from './Filters'; 
 import CharacterList from './CharacterList'; 
 
+// página principal. Lo que en un principio es App
 const Home = props => {
 	const {AllCharacters, SearchName, getNameInput} = props;
 	return (

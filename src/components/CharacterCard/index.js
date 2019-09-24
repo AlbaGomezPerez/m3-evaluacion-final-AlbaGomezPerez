@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// estructura tarjeta personaje
 const CharacterCard = props => {
   const {name, img, species, id} = props;
   return (
