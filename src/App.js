@@ -17,6 +17,7 @@ class App extends React.Component {
 		this.state = {
 			AllCharacters: [], 
 			SearchName: ''
+			// otro buscador ''
 	}; 
 
 	this.getNameInput = this.getNameInput.bind(this); 
