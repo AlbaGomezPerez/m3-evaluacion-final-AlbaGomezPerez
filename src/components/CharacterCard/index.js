@@ -11,7 +11,7 @@ const CharacterCard = props => {
 				<img className="CharacterPhoto" src={img} alt={`Imagen de ${name}`}></img>
 			</div>
 			<div className="CharacterName">{name}</div>
-			<div className="CharacterSpecies">{species}</div>
+  <div className="CharacterSpecies">{species} {(species === 'Alien') ? <i class="em em-alien"></i> : <i class="em em-adult"></i>}</div>
 								
 			</li>
 		</ul>
