@@ -12,7 +12,7 @@ const CharacterDetail = props => {
 				.filter(myCartoon => myCartoon.id === CharacterId)
 				.map(item => {
 					return (
-						<div className="card" key={item.id}>
+						<div className="cardDetail" key={item.id}>
 							<Link className="DetailLink"to={"/"}>
 							<ul className="ContainerCharacterDetail"> 
 								<li className="PaintCharacterDetail">
@@ -43,7 +43,7 @@ const CharacterDetail = props => {
 
 CharacterDetail.propTypes = {
 	AllCharacters: PropTypes.array, 
-	Match: PropTypes.number
+	Match: PropTypes.object
 	
   };
 
