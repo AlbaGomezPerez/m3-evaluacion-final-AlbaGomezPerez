@@ -17,7 +17,7 @@ const CharacterDetail = props => {
 									<div className="CharacterPhotoContainerDetail">
 										<img className="CharacterPhotoDetail" src={item.image} alt={`Imagen de ${item.name}`}></img>
 									</div>
-									<div ClassName="ContainerFeaturesDetail">
+									<div className="ContainerFeaturesDetail">
 										<div className="CharacterNameDetail">{item.name}</div>
 										<div className="CharacterSpeciesDetail">{item.species} {(item.species === 'Alien') ? <i className="em em-alien"></i> : <i className="em em-adult"></i>}</div>
 										<div className="CharacterStatusDetail">{item.status} {(item.status === 'Dead') ? <i className="em em-black_heart"></i> : '' }</div>

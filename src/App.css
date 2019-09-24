@@ -8,10 +8,12 @@ body {
 }
 
 .Title {
-	width: 100vw;
- 	height: 1px; 
+	width: 800px;
+	height: 1px; 
+	margin: auto; 
  	overflow: hidden;
- 	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat; 
 	padding-top: 300px; 
 	background-image: url(./images/Rick.png); 
 	
@@ -88,8 +90,7 @@ body {
 }
 
 .ContainerFeaturesDetail {
-	display: block; 
-	background-color: pink; 
+	display: block;  
 	
 }
 
@@ -140,8 +141,9 @@ body {
 .BackContainer {
 	/* background-color: rgb(8, 168, 155);  */
 	margin-left: 20px; 
-
 }
+
+
 
 
 

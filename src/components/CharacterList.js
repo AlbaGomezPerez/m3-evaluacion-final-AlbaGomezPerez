@@ -21,7 +21,6 @@ const CharacterList = props => {
 									img={item.image}
 									species={item.species}
 									id={item.id}/>
-								Tarjeta en detalle
 							</Link>
 						</li>
 					); 
