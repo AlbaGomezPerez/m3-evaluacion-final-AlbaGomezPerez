@@ -11,22 +11,25 @@ const CharacterDetail = props => {
 				.map(item => {
 					return (
 						<div className="card" key={item.id}>
-							<Link to={"/"}>
-							<ul className="ContainerCharacter"> 
-								<li className="PaintCharacter">
-									<div className="CharacterPhotoContainer">
-										<img className="CharacterPhoto" src={item.image} alt={`Imagen de ${item.name}`}></img>
+							<Link className="DetailLink"to={"/"}>
+							<ul className="ContainerCharacterDetail"> 
+								<li className="PaintCharacterDetail">
+									<div className="CharacterPhotoContainerDetail">
+										<img className="CharacterPhotoDetail" src={item.image} alt={`Imagen de ${item.name}`}></img>
 									</div>
-									<div className="CharacterName">{item.name}</div>
-									<div className="CharacterSpecies">{item.species} {(item.species === 'Alien') ? <i class="em em-alien"></i> : <i class="em em-adult"></i>}</div>
-									<div className="CharacterStatus">{item.status} {(item.status === 'Dead') ? <i class="em em-black_heart"></i> : '' }</div>
-									<div className="CharacterPlanet">{item.origin.name}</div>
-									<div className="CharacterEpisodes">It appears in {item.episode.length} episodes</div>
+									<div ClassName="ContainerFeaturesDetail">
+										<div className="CharacterNameDetail">{item.name}</div>
+										<div className="CharacterSpeciesDetail">{item.species} {(item.species === 'Alien') ? <i className="em em-alien"></i> : <i className="em em-adult"></i>}</div>
+										<div className="CharacterStatusDetail">{item.status} {(item.status === 'Dead') ? <i className="em em-black_heart"></i> : '' }</div>
+										<div className="CharacterPlanetDetail">{item.origin.name}</div>
+										<div className="CharacterEpisodesDetail">{item.episode.length}</div>
+										<div className="BackContainer">
+											<p className="BackText">Go back</p>
+										</div>
+									</div>
 								</li>
 							</ul>
-							<div className="BackContainer">
-								<p className="BackText">Go back</p>
-							</div>
+			
 							</Link>
 						</div>
 					)  
