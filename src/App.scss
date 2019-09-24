@@ -16,11 +16,6 @@ body {
 	background-repeat: no-repeat; 
 	padding-top: 300px; 
 	background-image: url(./images/Rick.png); 
-	
-	/* @media all and (min-width:768px){
-		width: 470px;
-		padding-top: 120px;
-} */
 }
 
 .NameInput {
@@ -80,6 +75,12 @@ body {
 	align-items: center;
 	display: grid;
 	grid-template-columns: auto auto auto auto;
+		@media all and (max-width:768px){
+			grid-template-columns: auto auto; 	
+		} 
+		@media all and (max-width:320px){
+			grid-template-columns: auto; 	
+		} 
 	 
 }
 
@@ -108,6 +109,8 @@ body {
 	display: flex; 
 	height: 300px;
 	padding: 40px; 
+	@media all and (max-width:464px){
+	} 
 }
 
 .PaintCharacterDetail {
