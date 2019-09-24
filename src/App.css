@@ -23,6 +23,19 @@ body {
 } */
 }
 
+.NameInput {
+	width: 300px; 
+	height: 40px; 
+	border: 3px outset #87D984; 
+	background-color: #2A2740;
+    box-shadow: 2px 2px 10px white;
+	font-size: 20px;  
+}
+
+.PaintCharacter {
+	display: flex; 
+	flex-wrap: wrap; 
+}
 .CharacterName {
 	background-color: rgb(223, 77, 19); 
 	width: 300px; 
@@ -41,6 +54,7 @@ body {
 
 .CharacterPhotoContainer {
 	margin-bottom: 20px; 
+	padding-top: 30px; 
 }
 
 .ContainerCharacter {
@@ -50,14 +64,25 @@ body {
 	width: 320px; 
 	text-align: center; 
 	margin: 0px; 
+	padding: 0px;
+	margin-bottom: 20px; 
+	display: flex; 
+	flex-wrap: initial;  
 }
 
 .Cartoons {
 	list-style: none;
+	display: flex;
+  	flex-direction: column;
+  	align-content: center;
+  	align-items: center;
 }
 
-.Card {
+.card {
 	text-decoration: none; 
+	width: 1px; 
+	display: flex; 
+	flex-wrap: wrap; 
 }
 
 .CardLink { 

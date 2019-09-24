@@ -5,8 +5,7 @@ const Filters = props => {
   const {SearchName, getNameInput} = props;
   return (
 	<div className="app__filters">
-		<p>Busca por nombre del personaje</p>
-		<input type="text" className="NameInput" onChange={getNameInput} value={SearchName}/>
+		<input type="text" className="NameInput" placeHolder="Write a character's name"onChange={getNameInput} value={SearchName}/>
 	</div>  
   );
 };
