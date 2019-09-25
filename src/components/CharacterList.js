@@ -7,11 +7,24 @@ import { Link } from "react-router-dom";
 // Map y filter. estructura lista genérica. Ul y li
 
 const CharacterList = props => {
-		const {AllCharacters, SearchName} = props;
+		const {AllCharacters, SearchName, SearchGender} = props;
 		return (
 			<ul className="Cartoons" >
 				{AllCharacters 
 				.filter(myCartoon => myCartoon.name.toUpperCase().includes(SearchName.toUpperCase()))
+				.filter(myCartoon => {
+					if (SearchGender === "All") {
+						return true; 
+					} else {
+						if (
+							SearchGender === myCartoon.gender
+						){
+							return true; 
+						}
+						return false; 
+					} 
+				})
+
 				.map(item => {
 					return (
 						<li key={item.id}>

@@ -16,11 +16,12 @@ class App extends React.Component {
 
 		this.state = {
 			AllCharacters: [], 
-			SearchName: ''
-			// otro buscador ''
+			SearchName: '',
+			SearchGender: 'All'
 	}; 
 
 	this.getNameInput = this.getNameInput.bind(this); 
+	this.getGender = this.getGender.bind(this);
 }
 
 
@@ -51,8 +52,16 @@ class App extends React.Component {
 
 }
 
+	getGender(event) {
+		const SearchGender = event.currentTarget.value;  
+		this.setState({
+			SearchGender: SearchGender 
+}); 
+
+}
+
 	render() {
-		const {AllCharacters, SearchName} = this.state; 
+		const {AllCharacters, SearchName, SearchGender} = this.state; 
 		return (
 			<div className="App">
 				<header>
@@ -68,6 +77,8 @@ class App extends React.Component {
 									AllCharacters={AllCharacters}
 									SearchName={SearchName}
 									getNameInput={this.getNameInput}
+									getGender={this.getGender}
+									SearchGender={SearchGender}
 								/>
 							)}
 						/>
